@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Love, Shonna ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --blush-pink: #f9e3e3;
+            --lavender: #e6e6fa;
+            --soft-red: #ff6b8b;
+            --ivory: #fffff0;
+            --dark-romantic: #2a0a3a;
+            --gold: #ffd700;
+            --rose-gold: #b76e79;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--ivory);
+            color: #333;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Floating hearts animation */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            color: var(--soft-red);
+            opacity: 0.6;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Section common styles */
+        section {
+            padding: 80px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--soft-red);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--soft-red);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4)), 
+                        url('https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        #hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            color: var(--soft-red);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #hero p {
+            font-size: 1.8rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .cta-button {
+            background-color: var(--soft-red);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif;
+            box-shadow: 0 5px 15px rgba(255, 107, 139, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #ff4d73;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.6);
+        }
+
+        /* Love Letter Section */
+        #love-letter {
+            background-color: var(--blush-pink);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .letter-container {
+            max-width: 800px;
+            padding: 60px 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .letter-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(to right, var(--soft-red), var(--lavender));
+        }
+
+        .love-letter-content {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        .letter-signature {
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: var(--soft-red);
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        /* Reasons Section */
+        #reasons {
+            background-color: var(--lavender);
+            min-height: 100vh;
+            padding: 100px 20px;
+        }
+
+        .reasons-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .reason-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .reason-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--soft-red);
+        }
+
+        .heart-icon {
+            color: var(--soft-red);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .reason-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .reason-card p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Our Soul's Symphony Section */
+        #symphony {
+            min-height: 100vh;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #fff0f5 0%, #f8f0ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .symphony-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .symphony-heart {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,107,139,0.1) 0%, rgba(255,107,139,0.05) 70%, transparent 100%);
+            filter: blur(20px);
+            z-index: 1;
+        }
+
+        .symphony-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .symphony-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .symphony-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 139, 0.15);
+        }
+
+        .symphony-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--soft-red), var(--lavender));
+        }
+
+        .symphony-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--soft-red), var(--rose-gold));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 20px rgba(255, 107, 139, 0.3);
+        }
+
+        .symphony-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .symphony-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .soul-quote {
+            max-width: 800px;
+            margin: 60px auto 0;
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            position: relative;
+            border-left: 5px solid var(--soft-red);
+            border-right: 5px solid var(--lavender);
+        }
+
+        .soul-quote p {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: var(--rose-gold);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .soul-quote .author {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Musical Notes Animation */
+        .music-note {
+            position: absolute;
+            color: var(--rose-gold);
+            opacity: 0.3;
+            font-size: 2rem;
+            z-index: 1;
+            animation: float-note 8s infinite linear;
+        }
+
+        @keyframes float-note {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100px) rotate(180deg);
+                opacity: 0;
+            }
+        }
+
+        /* Proposal Section */
+        #proposal {
+            min-height: 100vh;
+            background-color: var(--dark-romantic);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .proposal-content {
+            max-width: 800px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 20px 40px rgba(255, 107, 139, 0.2);
+            }
+            100% {
+                box-shadow: 0 20px 60px rgba(255, 107, 139, 0.4);
+            }
+        }
+
+        #proposal h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            color: white;
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 107, 139, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 107, 139, 0.8), 0 0 40px rgba(255, 107, 139, 0.6);
+            }
+        }
+
+        .proposal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .proposal-btn {
+            padding: 20px 50px;
+            font-size: 1.8rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+        }
+
+        .yes-btn {
+            background-color: var(--soft-red);
+            color: white;
+            box-shadow: 0 10px 20px rgba(255, 107, 139, 0.4);
+        }
+
+        .always-btn {
+            background-color: var(--gold);
+            color: var(--dark-romantic);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .proposal-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .response-message {
+            display: none;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .response-message h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .response-message p {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Final Message */
+        #final-message {
+            min-height: 70vh;
+            background: linear-gradient(135deg, var(--blush-pink) 0%, var(--lavender) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .final-content {
+            max-width: 800px;
+            padding: 60px 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .final-content h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--soft-red);
+            margin-bottom: 30px;
+        }
+
+        .final-content p {
+            font-size: 1.8rem;
+            color: #555;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--soft-red);
+            font-weight: bold;
+        }
+
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            padding: 10px 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .music-btn {
+            background-color: var(--soft-red);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .music-info {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Heart Confetti */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+        }
+
+        .confetti-heart {
+            position: absolute;
+            color: var(--soft-red);
+            font-size: 20px;
+            opacity: 0;
+            animation: confetti-fall 5s linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 3rem;
+            }
+            
+            #hero p {
+                font-size: 1.4rem;
+            }
+            
+            .love-letter-content {
+                font-size: 1.5rem;
+            }
+            
+            .reasons-container,
+            .symphony-content {
+                grid-template-columns: 1fr;
+            }
+            
+            #proposal h2 {
+                font-size: 3rem;
+            }
+            
+            .proposal-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .proposal-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .soul-quote p {
+                font-size: 1.8rem;
+            }
+            
+            .symphony-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <button class="music-btn" id="playBtn">
+            <i class="fas fa-play"></i>
+        </button>
+        <div class="music-info">Our Song</div>
+        <audio id="bgMusic" loop>
+            <source src="https://assets.mixkit.co/music/preview/mixkit-loving-you-117.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>To My Love, Shonna ❤️</h1>
+            <p>"Every heartbeat of mine whispers your name..."</p>
+            <button class="cta-button" onclick="document.getElementById('love-letter').scrollIntoView({behavior: 'smooth'})">Begin Our Story</button>
+        </div>
+    </section>
+    
+    <!-- Love Letter Section -->
+    <section id="love-letter">
+        <div class="letter-container">
+            <div class="love-letter-content">
+                <p>Babe, I hope you know how much I appreciate everything you do for me and all the time you give to me. It means more than you can possibly imagine. Seeing you makes my entire day. Your smile, your smell, the way you crinkle your nose at me to let me know you're listening even though you're exhausted and falling asleep.</p>
+                <br>
+                <p>I love those things — those tiny, insignificant things that make you you. I don't think I'll ever stop feeling butterflies when I see you. I don't think I'll ever be able to stop myself from running to you when I get to see you.</p>
+                <br>
+                <p>I won't ever stop choosing you, loving you with everything I am. I never liked the word soulmate before I met you... but now I have no other way of explaining it.</p>
+                <br>
+                <p>I know this is a bad analogy, but it's like my soul was a rhythm and yours was a beat. My rhythm had nothing to follow — it was a beautiful mess of jumbled notes, while yours was an unwavering beat, strong and loud. Together, we're music.</p>
+                <br>
+                <p>My soul can only exist in harmony with yours, it seems, and I wouldn't want it any other way. You're the most patient, loving, loyal, and remarkable man I know. There are so many lives I want to live with you.</p>
+            </div>
+            <div class="letter-signature">— Forever Yours, Sanju ❤️</div>
+        </div>
+    </section>
+    
+    <!-- Reasons I Love You -->
+    <section id="reasons">
+        <h2 class="section-title">Reasons I Love You</h2>
+        <div class="reasons-container">
+            <div class="reason-card">
+                <div class="heart-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Your patience calms my storms</h3>
+                <p>Even when I'm at my most chaotic, you have this incredible ability to bring peace to my soul.</p>
+            </div>
+            <div class="reason-card">
+                <div class="heart-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Your smile feels like home</h3>
+                <p>No matter where we are, seeing your smile makes me feel safe, loved, and completely at home.</p>
+            </div>
+            <div class="reason-card">
+                <div class="heart-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>You love me even on my worst days</h3>
+                <p>You see all of me—the good, the bad, the messy—and you love me more for it.</p>
+            </div>
+            <div class="reason-card">
+                <div class="heart-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>You listen with your whole heart</h3>
+                <p>You don't just hear my words; you listen to what's in my heart and soul.</p>
+            </div>
+            <div class="reason-card">
+                <div class="heart-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>You make me feel completely safe</h3>
+                <p>With you, I can be my most vulnerable self, knowing you'll always protect my heart.</p>
+            </div>
+            <div class="reason-card">
+                <div class="heart-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Your soul complements mine</h3>
+                <p>We're two halves of the same whole—your rhythm and my beat creating perfect harmony.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Soul's Symphony Section -->
+    <section id="symphony">
+        <!-- Background floating hearts -->
+        <div class="symphony-heart" style="top: -100px; left: -100px;"></div>
+        <div class="symphony-heart" style="bottom: -100px; right: -100px;"></div>
+        
+        <!-- Floating music notes -->
+        <div class="music-note" style="top: 10%; left: 5%;">♪</div>
+        <div class="music-note" style="top: 20%; right: 10%;">♫</div>
+        <div class="music-note" style="top: 40%; left: 15%;">♩</div>
+        <div class="music-note" style="top: 60%; right: 5%;">♪</div>
+        <div class="music-note" style="top: 80%; left: 10%;">♫</div>
+        
+        <h2 class="section-title">Our Soul's Symphony</h2>
+        
+        <div class="symphony-container">
+            <div class="symphony-content">
+                <!-- Card 1 -->
+                <div class="symphony-card">
+                    <div class="symphony-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>The Rhythm That Found Its Beat</h3>
+                    <p>Before you, my soul was a beautiful chaos—a rhythm without direction, searching for its purpose. Then I met you, and everything changed. Your soul became the steady, unwavering beat that my rhythm could finally follow. Together, we create music that only our hearts can hear.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="symphony-card">
+                    <div class="symphony-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Eternal Harmony</h3>
+                    <p>Some connections are meant for a lifetime, but ours feels timeless—like it began long before we met and will continue long after. Our souls don't just complement each other; they complete each other in ways that defy explanation. This harmony is what my soul has been searching for across lifetimes.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="symphony-card">
+                    <div class="symphony-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Where My Soul Feels At Home</h3>
+                    <p>Home isn't a place with four walls and a roof. Home is the feeling I get when I'm with you—the safety, the comfort, the belonging. Your arms are where my soul rests. Your heart is where my love resides. Your presence is where I find my peace.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="symphony-card">
+                    <div class="symphony-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Love That Grows Deeper</h3>
+                    <p>With every passing day, my love for you doesn't just persist—it deepens, strengthens, and grows more beautiful. Like a tree with roots reaching deep into the earth, our connection grows stronger with time, weathering every season together, becoming more magnificent with each passing year.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="symphony-card">
+                    <div class="symphony-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>My Constant in Changing Tides</h3>
+                    <p>In a world that's constantly shifting, you are my anchor. When storms come, you're my shelter. When darkness falls, you're my light. No matter what life brings, I know that with you by my side, we can face anything. Your love is the constant that grounds me.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="symphony-card">
+                    <div class="symphony-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>The Treasure I Never Knew I Needed</h3>
+                    <p>You are the most precious gift life has given me—a treasure I didn't know I was searching for until I found you. Your love has added colors to my world I never knew existed, shown me depths of happiness I never thought possible, and given me a future I can't wait to build with you.</p>
+                </div>
+            </div>
+            
+            <!-- Final Quote -->
+            <div class="soul-quote">
+                <p>"My soul recognizes yours like an old song it never forgot. In the symphony of the universe, our hearts beat in perfect harmony—a melody written just for us, playing across lifetimes."</p>
+                <div class="author">— Sanju</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Proposal Section -->
+    <section id="proposal">
+        <div class="proposal-content">
+            <h2 id="proposal-text">Shonna, will you be mine forever? 💍❤️</h2>
+            <div class="proposal-buttons">
+                <button class="proposal-btn yes-btn" onclick="handleResponse('yes')">YES 💖</button>
+                <button class="proposal-btn always-btn" onclick="handleResponse('always')">ALWAYS YES 😭❤️</button>
+            </div>
+            <div class="response-message" id="responseMessage">
+                <h3>I knew my soul chose yours.</h3>
+                <p>From this moment and in every life to come, I choose you. Always.</p>
+            </div>
+        </div>
+        
+        <!-- Heart Confetti Container -->
+        <div class="confetti-container" id="confettiContainer"></div>
+    </section>
+    
+    <!-- Final Message -->
+    <section id="final-message">
+        <div class="final-content">
+            <h2>"No matter how many lives I live, I'll always find you."</h2>
+            <p>My soul will always recognize yours, in this life and every one that follows.</p>
+            <div class="signature">— Forever Yours, Sanju ❤️</div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize floating hearts
+        function createFloatingHearts() {
+            const container = document.getElementById('floatingHearts');
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤';
+                
+                // Random properties
+                const size = Math.random() * 20 + 10;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = Math.random() * 10 + 15;
+                
+                heart.style.fontSize = `${size}px`;
+                heart.style.left = `${left}%`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                
+                container.appendChild(heart);
+            }
+        }
+        
+        // Background music control
+        const playBtn = document.getElementById('playBtn');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+        
+        playBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                bgMusic.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                bgMusic.play();
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Create floating music notes
+        function createMusicNotes() {
+            const symphonySection = document.getElementById('symphony');
+            const notes = ['♪', '♫', '♩', '♬'];
+            
+            for (let i = 0; i < 8; i++) {
+                const note = document.createElement('div');
+                note.classList.add('music-note');
+                note.innerHTML = notes[Math.floor(Math.random() * notes.length)];
+                
+                // Random properties
+                const left = Math.random() * 100;
+                const delay = Math.random() * 8;
+                const duration = Math.random() * 6 + 6;
+                const fontSize = Math.random() * 20 + 15;
+                
+                note.style.left = `${left}%`;
+                note.style.animationDelay = `${delay}s`;
+                note.style.animationDuration = `${duration}s`;
+                note.style.fontSize = `${fontSize}px`;
+                note.style.top = `${Math.random() * 100}%`;
+                
+                symphonySection.appendChild(note);
+            }
+        }
+        
+        // Animate symphony cards on scroll
+        function animateSymphonyCards() {
+            const cards = document.querySelectorAll('.symphony-card');
+            const triggerBottom = window.innerHeight * 0.85;
+            
+            cards.forEach((card, index) => {
+                const cardTop = card.getBoundingClientRect().top;
+                
+                if (cardTop < triggerBottom) {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 150);
+                }
+            });
+        }
+        
+        // Handle proposal response
+        function handleResponse(type) {
+            const responseMessage = document.getElementById('responseMessage');
+            const proposalButtons = document.querySelector('.proposal-buttons');
+            
+            // Show response message
+            responseMessage.style.display = 'block';
+            proposalButtons.style.display = 'none';
+            
+            // Create heart confetti
+            createHeartConfetti();
+            
+            // Scroll to response message
+            responseMessage.scrollIntoView({behavior: 'smooth', block: 'center'});
+            
+            // Optional: Send response to server (Firebase) would go here
+            console.log(`Response recorded: ${type}`);
+        }
+        
+        // Create heart confetti
+        function createHeartConfetti() {
+            const container = document.getElementById('confettiContainer');
+            container.style.display = 'block';
+            
+            for (let i = 0; i < 150; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('confetti-heart');
+                heart.innerHTML = '❤';
+                
+                // Random properties
+                const size = Math.random() * 20 + 10;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 3 + 3;
+                const color = Math.random() > 0.7 ? '#ffd700' : '#ff6b8b';
+                
+                heart.style.fontSize = `${size}px`;
+                heart.style.left = `${left}%`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.color = color;
+                
+                container.appendChild(heart);
+            }
+            
+            // Remove confetti after animation completes
+            setTimeout(() => {
+                container.style.display = 'none';
+                container.innerHTML = '';
+            }, 6000);
+        }
+        
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingHearts();
+            createMusicNotes();
+            
+            // Initialize symphony card animations
+            const cards = document.querySelectorAll('.symphony-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Add subtle animation to proposal text
+            const proposalText = document.getElementById('proposal-text');
+            let scaleDirection = 1;
+            setInterval(() => {
+                const currentScale = parseFloat(proposalText.style.transform?.replace('scale(', '') || 1);
+                const newScale = currentScale + (0.002 * scaleDirection);
+                
+                if (newScale >= 1.05) scaleDirection = -1;
+                if (newScale <= 1) scaleDirection = 1;
+                
+                proposalText.style.transform = `scale(${newScale})`;
+            }, 50);
+            
+            // Initialize scroll animations
+            animateSymphonyCards();
+            window.addEventListener('scroll', animateSymphonyCards);
+            
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
