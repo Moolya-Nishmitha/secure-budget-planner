@@ -42,7 +42,7 @@ The project follows a clear frontend–backend separation and focuses on authent
 
 ## 📂 Project Structure
 
-```
+
 
 secure-budget-planner/
 │
@@ -72,7 +72,7 @@ secure-budget-planner/
 │   └── .gitignore
 │
 └── README.md
-
+```
 ````
 
 ---
