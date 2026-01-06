@@ -1,6 +1,3 @@
-Here. A **clean, professional README** that won’t embarrass you in front of seniors, evaluators, or recruiters. Copy-paste this into `README.md` at the root of the repo.
-
-No fluff. Clear structure. Explains exactly what the project is and how to run it.
 
 ---
 
